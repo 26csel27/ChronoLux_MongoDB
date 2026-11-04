@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ChronoLux - Luxury Watch Collection</title>
+  <link rel="stylesheet" href="/style.css">
+  <script src="/dashboard.js" defer></script>
+</head>
+<body>
+<main id="dashboardView">
+  <header class="navbar">
+    <div class="brand">
+      <h1>CHRONOLUX</h1>
+      <p class="sub-label-dash">The Art of Timeless Luxury</p>
+    </div>
+    <div class="nav-controls">
+      <span class="cart-pill">🛒 Cart: <span id="cartCount">0</span></span>
+      <button type="button" class="reset-btn" id="resetCart">Reset Cart</button>
+      <button type="button" class="reset-btn" id="logoutButton">Logout</button>
+    </div>
+  </header>
+
+  <p class="welcome">Welcome, <strong id="customerName">Collector</strong></p>
+
+  <section class="brand-story">
+    <h3>Welcome to ChronoLux</h3>
+    <p>Discover a curated collection of luxury-inspired timepieces, where precision, craftsmanship and timeless style come together.</p>
+  </section>
+
+  <section class="collection-heading">
+    <h2>The Watch Collection</h2>
+    <p class="sub-label-dash">Explore our exclusive timepieces</p>
+  </section>
+
+  <div class="search-console">
+    <input type="search" id="vaultSearch" placeholder="Search watches by name or collection..." aria-label="Search watches">
+  </div>
+
+  <section class="product-list" id="productList">
+    <article class="product-card">
+      <div class="watch-flip-container"><div class="watch-inner-card">
+        <div class="watch-face-front"><img src="https://images.unsplash.com/photo-1523170335258-f5ed11844a49?w=700" alt="Silver classic wristwatch"></div>
+        <div class="watch-face-back"><div><h3>Royal Classic</h3><p>Elegant stainless-steel styling.</p><p>Classic collection</p></div></div>
+      </div></div>
+      <h3 class="watch-title">Royal Classic</h3>
+      <p class="watch-meta">Automatic | Silver | Classic Collection</p>
+      <p class="price-tag">₹45,000</p>
+      <div class="action-pane"><button class="flip-btn" type="button">Flip Watch</button><button class="add-cart-btn" type="button">Add to Cart</button></div>
+    </article>
+
+    <article class="product-card">
+      <div class="watch-flip-container"><div class="watch-inner-card">
+        <div class="watch-face-front"><img src="https://images.unsplash.com/photo-1524805444758-089113d48a6d?w=700" alt="Luxury dark wristwatch"></div>
+        <div class="watch-face-back"><div><h3>Midnight Gold</h3><p>Black and gold-inspired finish.</p><p>Premium collection</p></div></div>
+      </div></div>
+      <h3 class="watch-title">Midnight Gold</h3>
+      <p class="watch-meta">Quartz | Black Gold | Premium Collection</p>
+      <p class="price-tag">₹65,000</p>
+      <div class="action-pane"><button class="flip-btn" type="button">Flip Watch</button><button class="add-cart-btn" type="button">Add to Cart</button></div>
+    </article>
+
+    <article class="product-card">
+      <div class="watch-flip-container"><div class="watch-inner-card">
+        <div class="watch-face-front"><img src="https://images.unsplash.com/photo-1508685096489-7aacd43bd3b1?w=700" alt="Sports wristwatch"></div>
+        <div class="watch-face-back"><div><h3>Ocean Master</h3><p>Sport-inspired timepiece.</p><p>Blue collection</p></div></div>
+      </div></div>
+      <h3 class="watch-title">Ocean Master</h3>
+      <p class="watch-meta">Automatic | Blue | Sports Collection</p>
+      <p class="price-tag">₹55,000</p>
+      <div class="action-pane"><button class="flip-btn" type="button">Flip Watch</button><button class="add-cart-btn" type="button">Add to Cart</button></div>
+    </article>
+
+    <article class="product-card">
+      <div class="watch-flip-container"><div class="watch-inner-card">
+        <div class="watch-face-front"><img src="https://images.unsplash.com/photo-1547996160-81dfa63595aa?w=700" alt="Silver wristwatch"></div>
+        <div class="watch-face-back"><div><h3>Silver Heritage</h3><p>Minimalist silver styling.</p><p>Heritage collection</p></div></div>
+      </div></div>
+      <h3 class="watch-title">Silver Heritage</h3>
+      <p class="watch-meta">Quartz | Silver | Heritage Collection</p>
+      <p class="price-tag">₹35,000</p>
+      <div class="action-pane"><button class="flip-btn" type="button">Flip Watch</button><button class="add-cart-btn" type="button">Add to Cart</button></div>
+    </article>
+
+    <article class="product-card">
+      <div class="watch-flip-container"><div class="watch-inner-card">
+        <div class="watch-face-front"><img src="https://images.unsplash.com/photo-1434056886845-dac89ffe9b56?w=700" alt="Leather strap wristwatch"></div>
+        <div class="watch-face-back"><div><h3>Royal Leather</h3><p>Classic leather-strap styling.</p><p>Leather collection</p></div></div>
+      </div></div>
+      <h3 class="watch-title">Royal Leather</h3>
+      <p class="watch-meta">Quartz | Brown | Leather Collection</p>
+      <p class="price-tag">₹28,000</p>
+      <div class="action-pane"><button class="flip-btn" type="button">Flip Watch</button><button class="add-cart-btn" type="button">Add to Cart</button></div>
+    </article>
+
+    <article class="product-card">
+      <div class="watch-flip-container"><div class="watch-inner-card">
+        <div class="watch-face-front"><img src="https://images.unsplash.com/photo-1524592094714-0f0654e20314?w=700" alt="Black luxury wristwatch"></div>
+        <div class="watch-face-back"><div><h3>Black Diamond</h3><p>Bold dark styling.</p><p>Elite collection</p></div></div>
+      </div></div>
+      <h3 class="watch-title">Black Diamond</h3>
+      <p class="watch-meta">Automatic | Black | Elite Collection</p>
+      <p class="price-tag">₹75,000</p>
+      <div class="action-pane"><button class="flip-btn" type="button">Flip Watch</button><button class="add-cart-btn" type="button">Add to Cart</button></div>
+    </article>
+  </section>
+
+  <p id="noResults" hidden>No matching watches found.</p>
+  <footer><p>© 2026 ChronoLux. All rights reserved.</p></footer>
+</main>
+</body>
+</html>

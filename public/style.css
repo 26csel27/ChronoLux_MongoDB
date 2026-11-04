@@ -1,0 +1,189 @@
+* { box-sizing: border-box; }
+
+:root {
+  --bg: #080a0d;
+  --panel: #0f131a;
+  --panel2: #131822;
+  --gold: #c5a059;
+  --gold-light: #d9b873;
+  --text: #e2e8f0;
+  --muted: #94a3b8;
+  --line: #2d3748;
+  --danger: #ef4444;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  padding: 24px;
+  background: radial-gradient(ellipse at top, #171b23 0%, var(--bg) 55%);
+  color: var(--text);
+  font-family: "Segoe UI", Arial, sans-serif;
+  text-align: center;
+}
+
+.box {
+  width: 100%;
+  max-width: 390px;
+  margin: 55px auto;
+  padding: 38px 30px;
+  background: rgba(15, 19, 26, .96);
+  border: 1px solid #292f39;
+  border-radius: 16px;
+  box-shadow: 0 20px 55px rgba(0,0,0,.65);
+}
+
+h1, h2, h3, h4 { margin-top: 0; }
+h2 {
+  margin-bottom: 20px;
+  color: var(--gold);
+  font-size: 23px;
+  font-weight: 650;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+h3, h4 { color: #fff; font-weight: 550; }
+.sub-label, .sub-label-dash { color: #64748b; font-size: 14px; }
+.sub-label { margin: -10px 0 22px; }
+
+input {
+  display: block;
+  width: 100%;
+  margin: 13px 0;
+  padding: 13px 14px;
+  color: white;
+  background: #0a0d14;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  outline: none;
+  font-size: 14px;
+}
+input:focus { border-color: var(--gold); box-shadow: 0 0 0 2px rgba(197,160,89,.12); }
+input::placeholder { color: #718096; }
+
+button {
+  padding: 12px 16px;
+  color: #080a0d;
+  background: var(--gold);
+  border: 0;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: .4px;
+  cursor: pointer;
+  transition: .25s ease;
+}
+button:hover { background: var(--gold-light); transform: translateY(-1px); }
+button:disabled { opacity: .6; cursor: wait; transform: none; }
+.box form button { width: 100%; margin-top: 8px; }
+.link-text { color: var(--gold); text-decoration: none; }
+.link-text:hover { text-decoration: underline; }
+.toggle-note { color: #64748b; font-size: 13px; margin-top: 20px; }
+#message { min-height: 18px; font-size: 13px; line-height: 1.5; }
+
+#dashboardView {
+  width: 100%;
+  max-width: 1200px;
+  margin: 10px auto;
+  padding: 34px;
+  border: 1px solid rgba(197,160,89,.18);
+  border-radius: 20px;
+  background: radial-gradient(circle at 50% -10%, rgba(197,160,89,.16), #0f131a 55%, #080a0d 100%);
+  box-shadow: 0 35px 80px rgba(0,0,0,.7);
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 18px;
+  padding-bottom: 20px;
+  margin-bottom: 28px;
+  border-bottom: 1px solid rgba(197,160,89,.2);
+}
+.brand { text-align: left; }
+.brand h1 { margin: 0; color: var(--gold); letter-spacing: 3px; font-size: 25px; }
+.brand .sub-label-dash { margin: 5px 0 0; }
+.nav-controls { display: flex; align-items: center; flex-wrap: wrap; gap: 12px; }
+.cart-pill {
+  padding: 8px 14px;
+  border: 1px solid rgba(197,160,89,.35);
+  border-radius: 20px;
+  color: var(--text);
+  background: rgba(197,160,89,.12);
+  font-size: 13px;
+}
+.reset-btn { width: auto; padding: 9px 13px; color: #ff7777; background: #20212a; border: 1px solid #3a3a44; }
+.reset-btn:hover { color: white; background: #343440; }
+.logout-link { color: #ff7777; }
+.brand-story {
+  margin-bottom: 28px;
+  padding: 24px;
+  text-align: left;
+  border-left: 3px solid var(--gold);
+  border-radius: 5px 12px 12px 5px;
+  background: linear-gradient(135deg, rgba(20,26,36,.85), rgba(10,13,18,.8));
+}
+.brand-story h3 { margin-bottom: 8px; color: var(--gold); text-transform: uppercase; letter-spacing: 1.5px; }
+.brand-story p { margin-bottom: 0; color: var(--muted); font-size: 14px; line-height: 1.7; }
+.welcome { color: var(--muted); font-size: 14px; }
+.welcome strong { color: var(--gold-light); }
+.collection-heading { margin: 32px 0 22px; }
+.collection-heading h2 { margin-bottom: 8px; }
+.search-console { margin: 20px auto 32px; }
+.search-console input { max-width: 520px; margin: auto; border-color: rgba(197,160,89,.3); }
+.product-list { display: flex; justify-content: center; flex-wrap: wrap; gap: 24px; }
+.product-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 255px;
+  padding: 20px;
+  text-align: center;
+  border: 1px solid rgba(255,255,255,.07);
+  border-radius: 15px;
+  background: linear-gradient(180deg, #161d29, #0b0e14);
+  transition: .3s ease;
+}
+.product-card:hover { transform: translateY(-6px); border-color: rgba(197,160,89,.45); box-shadow: 0 18px 35px rgba(0,0,0,.45); }
+.watch-flip-container { height: 205px; margin-bottom: 16px; perspective: 1000px; cursor: pointer; }
+.watch-inner-card { position: relative; width: 100%; height: 100%; transform-style: preserve-3d; transition: transform .65s ease; }
+.watch-inner-card.flipped { transform: rotateY(180deg); }
+.watch-face-front, .watch-face-back {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,.06);
+  border-radius: 9px;
+  background: #171e29;
+  backface-visibility: hidden;
+}
+.watch-face-front img { width: 100%; height: 100%; object-fit: cover; }
+.watch-face-back { padding: 18px; transform: rotateY(180deg); background: #0c1017; color: var(--muted); font-size: 13px; }
+.watch-face-back p { line-height: 1.5; }
+.watch-title { margin: 8px 0; }
+.watch-meta { margin: 4px 0 12px; color: #8491a5; font-size: 11px; line-height: 1.5; }
+.price-tag { margin: 0 0 15px; color: var(--gold); font-size: 19px; font-weight: 700; }
+.action-pane { display: flex; flex-direction: column; gap: 9px; }
+.flip-btn { width: 100%; padding: 9px; color: #cbd5e1; background: #202a38; border: 1px solid #344154; font-size: 11px; }
+.flip-btn:hover { color: white; background: #2c394b; }
+.add-cart-btn { width: 100%; }
+#noResults { color: var(--muted); padding: 25px; }
+footer { margin-top: 45px; }
+footer p { color: #64748b; font-size: 12px; }
+
+@media (max-width: 700px) {
+  body { padding: 12px; }
+  .box { margin: 25px auto; padding: 30px 20px; }
+  #dashboardView { padding: 22px 14px; }
+  .navbar { justify-content: center; text-align: center; }
+  .brand { text-align: center; }
+  .nav-controls { justify-content: center; }
+  .product-card { width: min(100%, 340px); }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { transition-duration: .01ms !important; scroll-behavior: auto !important; }
+}
