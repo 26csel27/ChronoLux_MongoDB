@@ -46,6 +46,7 @@ document.addEventListener("DOMContentLoaded", async () => {
       cartCount++;
       cartDisplay.textContent = cartCount;
       button.textContent = "Added ✓";
+      alert("Added to cart")
       window.setTimeout(() => { button.textContent = "Add to Cart"; }, 900);
     });
   });
