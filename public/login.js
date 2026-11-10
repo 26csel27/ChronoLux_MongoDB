@@ -23,6 +23,7 @@ loginForm.addEventListener("submit", async (event) => {
     if (!response.ok) throw new Error(data.message || "Login failed.");
 
     window.location.assign(data.redirect);
+    alert("Login Sucessfull!");
   } catch (error) {
     message.style.color = "#ef4444";
     message.textContent = error.message;
