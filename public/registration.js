@@ -42,6 +42,7 @@ registerForm.addEventListener("submit", async (event) => {
 
     message.style.color = "#c5a059";
     message.textContent = data.message;
+    alert("Registration is Sucessfull!");
     window.location.assign(data.redirect);
   } catch (error) {
     message.style.color = "#ef4444";
